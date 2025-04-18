@@ -1,46 +1,49 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 apply plugin: "com.android.library"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "androidx.benchmark"
 
 android {
-  compileSdkVersion 29
+    compileSdkVersion 36
+    namespace "dev.zacsweers.jsonserialization.android"
 
-  defaultConfig {
-    minSdkVersion 21
-    targetSdkVersion 29
-  }
-  compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-  }
-  sourceSets {
-    findByName("androidTest")?.java?.srcDirs("src/androidTest/kotlin")
-    findByName("main")?.java?.srcDirs("src/main/kotlin")
-  }
-  packagingOptions {
-    exclude 'META-INF/*.kotlin_module'
-  }
-  buildTypes {
-    release {
-      signingConfig signingConfigs.debug
+    defaultConfig {
+        minSdk 29
+        targetSdkVersion 36
+        //testInstrumentationRunnerArguments["androidx.benchmark.profiling.mode"] = "StackSampling"
     }
-  }
-}
-
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
-  kotlinOptions {
-    jvmTarget = "1.8"
-  }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlin {
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_11
+        }
+    }
+    testBuildType = "release"
+    buildTypes {
+        debug {
+            // Since debuggable can"t be modified by gradle for library modules,
+            // it must be done in a manifest - see src/androidTest/AndroidManifest.xml
+            // minifyEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "benchmark-proguard-rules.pro"
+        }
+        release {
+            isDefault = true
+        }
+    }
 }
 
 dependencies {
-  androidTestImplementation "com.google.guava:guava:27.1-jre"
-  androidTestImplementation "com.squareup.okio:okio:2.4.3"
-  androidTestImplementation "androidx.benchmark:benchmark-junit4:1.0.0"
-  androidTestImplementation "junit:junit:4.12"
-  androidTestImplementation "androidx.test:runner:1.2.0"
-  androidTestImplementation "androidx.test:rules:1.2.0"
-  androidTestImplementation "androidx.test.ext:junit:1.1.1"
-  implementation project(":models")
-  androidTestImplementation configurations.getByName("implementation")
+    androidTestImplementation "androidx.test:runner:1.6.2"
+    androidTestImplementation "androidx.test.ext:junit:1.2.1"
+    androidTestImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test:rules:1.6.1"
+    androidTestImplementation "androidx.benchmark:benchmark-junit4:1.3.4"
+
+    androidTestImplementation "com.google.guava:guava:33.4.8-jre"
+    androidTestImplementation "com.squareup.okio:okio:3.7.0"
+    androidTestImplementation project(":models")
 }

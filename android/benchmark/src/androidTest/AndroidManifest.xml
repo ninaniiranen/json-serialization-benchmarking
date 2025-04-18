@@ -17,12 +17,10 @@
 
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="dev.zacsweers.jsonserialization.android">
+    xmlns:tools="http://schemas.android.com/tools">
 
   <application
-      android:debuggable="false"
-      android:requestLegacyExternalStorage="true"
-      tools:ignore="HardcodedDebugMode"
-      tools:replace="android:debuggable"/>
+    android:debuggable="false"
+    tools:ignore="HardcodedDebugMode"
+    tools:replace="android:debuggable" />
 </manifest>
