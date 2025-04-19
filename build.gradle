@@ -1,10 +1,10 @@
-ext.kotlin_version = '1.9.25'
-ext.serialization_version = '1.0.0'
+ext.kotlin_version = '2.1.20'
+ext.serialization_version = '1.8.1'
 ext.jmh_version = '1.37'
 
 buildscript {
-    ext.kotlin_version = '1.9.25'
-    ext.serialization_version = '1.0.0'
+    ext.kotlin_version = '2.1.20'
+    ext.serialization_version = '1.8.1'
     ext.jmh_version = '1.37'
     repositories {
         google()

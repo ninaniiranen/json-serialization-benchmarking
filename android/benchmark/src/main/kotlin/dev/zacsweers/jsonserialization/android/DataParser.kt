@@ -5,50 +5,50 @@ import java.util.Locale
 fun main() {
 
     val data = """
-    2,834,600   ns        9990 allocs    Trace    Method Trace    AndroidBenchmark.gson_reflective_string_fromJson[minified=true]
-    2,414,226   ns        9230 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_string_fromJson[minified=true]
-    3,312,363   ns        5402 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_buffer_fromJson[minified=true]
-    2,685,229   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_string_toJson[minified=true]
-    3,757,564   ns        5431 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_string_fromJson[minified=true]
-    51,239,115   ns       68395 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_buffer_toJson[minified=true]
-    3,355,845   ns        5402 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_buffer_fromJson[minified=true]
-    4,400,347   ns        7682 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_buffer_fromJson[minified=true]
-    2,018,725   ns        2329 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_buffer_toJson[minified=true]
-    3,806,987   ns        5431 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_string_fromJson[minified=true]
-    4,840,885   ns        7711 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_string_fromJson[minified=true]
-    3,557,734   ns       14186 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_buffer_toJson[minified=true]
-    3,119,104   ns       10565 allocs    Trace    Method Trace    AndroidBenchmark.kserializer_string_fromJson[minified=true]
-    3,686,192   ns        3517 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_string_toJson[minified=true]
-    2,837,780   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_reflective_string_toJson[minified=true]
-    2,604,572   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_string_toJson[minified=true]
-    2,503,541   ns         263 allocs    Trace    Method Trace    AndroidBenchmark.kserializer_string_toJson[minified=true]
-    3,660,961   ns        3560 allocs    Trace    Method Trace    AndroidBenchmark.gson_reflective_string_toJson[minified=true]
-    2,117,916   ns        2329 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_buffer_toJson[minified=true]
-    4,206,401   ns        5431 allocs    Trace    Method Trace    AndroidBenchmark.moshi_reflective_string_fromJson[minified=true]
-    4,101,052   ns       14173 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_string_toJson[minified=true]
-    3,812,332   ns        9402 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_buffer_fromJson[minified=true]
-    2,997,468   ns        9983 allocs    Trace    Method Trace    AndroidBenchmark.gson_reflective_string_fromJson[minified=false]
-    2,591,292   ns        9223 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_string_fromJson[minified=false]
-    4,248,973   ns        5397 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_buffer_fromJson[minified=false]
-    2,681,005   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_string_toJson[minified=false]
-    4,859,000   ns        5440 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_string_fromJson[minified=false]
-    51,336,978   ns       68395 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_buffer_toJson[minified=false]
-    4,299,301   ns        5397 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_buffer_fromJson[minified=false]
-    5,313,846   ns        7677 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_buffer_fromJson[minified=false]
-    2,011,029   ns        2329 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_buffer_toJson[minified=false]
-    4,918,512   ns        5440 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_string_fromJson[minified=false]
-    5,898,057   ns        7720 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_string_fromJson[minified=false]
-    3,498,356   ns       14186 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_buffer_toJson[minified=false]
-    3,375,230   ns       10565 allocs    Trace    Method Trace    AndroidBenchmark.kserializer_string_fromJson[minified=false]
-    3,679,681   ns        3517 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_string_toJson[minified=false]
-    2,846,756   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_reflective_string_toJson[minified=false]
-    2,599,062   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_string_toJson[minified=false]
-    2,505,501   ns         263 allocs    Trace    Method Trace    AndroidBenchmark.kserializer_string_toJson[minified=false]
-    3,648,846   ns        3560 allocs    Trace    Method Trace    AndroidBenchmark.gson_reflective_string_toJson[minified=false]
-    2,120,773   ns        2329 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_buffer_toJson[minified=false]
-    5,289,765   ns        5440 allocs    Trace    Method Trace    AndroidBenchmark.moshi_reflective_string_fromJson[minified=false]
-    4,138,183   ns       14173 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_string_toJson[minified=false]
-    4,310,629   ns        9456 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_buffer_fromJson[minified=false]
+    2,907,614   ns        9990 allocs    Trace    Method Trace    AndroidBenchmark.gson_reflective_string_fromJson[minified=true]
+    2,365,389   ns        9230 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_string_fromJson[minified=true]
+    3,291,213   ns        5402 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_buffer_fromJson[minified=true]
+    2,700,573   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_string_toJson[minified=true]
+    3,719,274   ns        5431 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_string_fromJson[minified=true]
+   49,701,771   ns       68395 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_buffer_toJson[minified=true]
+    3,304,158   ns        5402 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_buffer_fromJson[minified=true]
+    4,201,765   ns        7682 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_buffer_fromJson[minified=true]
+    1,961,368   ns        2329 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_buffer_toJson[minified=true]
+    3,751,024   ns        5431 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_string_fromJson[minified=true]
+    4,655,439   ns        7711 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_string_fromJson[minified=true]
+    3,516,033   ns       14186 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_buffer_toJson[minified=true]
+    4,401,051   ns        9608 allocs    Trace    Method Trace    AndroidBenchmark.kserializer_string_fromJson[minified=true]
+    3,657,083   ns        3517 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_string_toJson[minified=true]
+    2,845,949   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_reflective_string_toJson[minified=true]
+    2,564,754   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_string_toJson[minified=true]
+    1,878,791   ns        2045 allocs    Trace    Method Trace    AndroidBenchmark.kserializer_string_toJson[minified=true]
+    3,669,262   ns        3560 allocs    Trace    Method Trace    AndroidBenchmark.gson_reflective_string_toJson[minified=true]
+    2,138,975   ns        2329 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_buffer_toJson[minified=true]
+    4,157,874   ns        5431 allocs    Trace    Method Trace    AndroidBenchmark.moshi_reflective_string_fromJson[minified=true]
+    4,098,317   ns       14173 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_string_toJson[minified=true]
+    3,667,723   ns        9402 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_buffer_fromJson[minified=true]
+    3,112,994   ns        9983 allocs    Trace    Method Trace    AndroidBenchmark.gson_reflective_string_fromJson[minified=false]
+    2,544,135   ns        9223 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_string_fromJson[minified=false]
+    4,217,546   ns        5397 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_buffer_fromJson[minified=false]
+    2,701,951   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_string_toJson[minified=false]
+    4,840,880   ns        5440 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_string_fromJson[minified=false]
+   49,903,177   ns       68395 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_buffer_toJson[minified=false]
+    4,242,172   ns        5397 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_buffer_fromJson[minified=false]
+    5,141,588   ns        7677 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_buffer_fromJson[minified=false]
+    1,956,718   ns        2329 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_buffer_toJson[minified=false]
+    4,836,122   ns        5440 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_string_fromJson[minified=false]
+    5,733,787   ns        7720 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_string_fromJson[minified=false]
+    3,504,924   ns       14186 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_buffer_toJson[minified=false]
+    4,596,421   ns        9608 allocs    Trace    Method Trace    AndroidBenchmark.kserializer_string_fromJson[minified=false]
+    3,663,407   ns        3517 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_string_toJson[minified=false]
+    2,849,725   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_reflective_string_toJson[minified=false]
+    2,564,999   ns        2316 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_codegen_string_toJson[minified=false]
+    1,887,524   ns        2045 allocs    Trace    Method Trace    AndroidBenchmark.kserializer_string_toJson[minified=false]
+    3,655,524   ns        3560 allocs    Trace    Method Trace    AndroidBenchmark.gson_reflective_string_toJson[minified=false]
+    2,133,149   ns        2329 allocs    Trace    Method Trace    AndroidBenchmark.moshi_autovalue_buffer_toJson[minified=false]
+    5,257,675   ns        5440 allocs    Trace    Method Trace    AndroidBenchmark.moshi_reflective_string_fromJson[minified=false]
+    4,106,915   ns       14173 allocs    Trace    Method Trace    AndroidBenchmark.moshi_kotlin_reflective_string_toJson[minified=false]
+    4,137,564   ns        9456 allocs    Trace    Method Trace    AndroidBenchmark.gson_autovalue_buffer_fromJson[minified=false]
     """.trimIndent()
     val regex = """\s*(?<time>[0-9,.]+)\s+(?<timeunit>[a-zA-Z]+)\s+(?<allocs>[0-9]+)\sallocs\s+Trace\s+Method\sTrace\s+(?<benchmark>.+)""".toRegex()
 
@@ -85,11 +85,11 @@ private fun printResults(type: ResultType, results: List<Analysis>) {
     }
 
     val output = buildString {
-        appendln()
+        appendLine()
         append(type.description)
-        appendln(':')
-        appendln()
-        appendln("```")
+        appendLine(':')
+        appendLine()
+        appendLine("```")
         groupedResults.entries
             .joinTo(this, "\n\n", postfix = "\n```") { (grouping, matchedAnalyses) ->
                 val content = matchedAnalyses.sortedBy { it.score }
