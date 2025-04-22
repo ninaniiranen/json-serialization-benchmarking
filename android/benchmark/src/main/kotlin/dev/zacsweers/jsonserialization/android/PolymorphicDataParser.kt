@@ -3,22 +3,22 @@ package dev.zacsweers.jsonserialization.android
 fun main() {
 
     val data = """
-    5,404,305   ns       25149 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_fromJson[minified=true,typeKeyLocation=first]
-    1,953,812   ns        2329 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_toJson[minified=true,typeKeyLocation=first]
-   52,263,073   ns       81446 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_toJson[minified=true,typeKeyLocation=first]
-    3,329,127   ns        5451 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_fromJson[minified=true,typeKeyLocation=first]
-    5,386,666   ns       25137 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_fromJson[minified=true,typeKeyLocation=last]
-    1,936,888   ns        2329 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_toJson[minified=true,typeKeyLocation=last]
-   52,539,428   ns       81446 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_toJson[minified=true,typeKeyLocation=last]
-    4,779,583   ns        5456 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_fromJson[minified=true,typeKeyLocation=last]
-    5,881,033   ns       25203 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_fromJson[minified=false,typeKeyLocation=first]
-    1,951,113   ns        2329 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_toJson[minified=false,typeKeyLocation=first]
-   52,505,781   ns       81446 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_toJson[minified=false,typeKeyLocation=first]
-    4,260,677   ns        5459 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_fromJson[minified=false,typeKeyLocation=first]
-    5,898,242   ns       25191 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_fromJson[minified=false,typeKeyLocation=last]
-    1,961,927   ns        2329 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_toJson[minified=false,typeKeyLocation=last]
-   52,917,604   ns       81446 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_toJson[minified=false,typeKeyLocation=last]
-    6,843,697   ns        5465 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_fromJson[minified=false,typeKeyLocation=last]
+    5,368,211   ns       25149 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_fromJson[minified=true,typeKeyLocation=first]
+    1,968,378   ns        2329 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_toJson[minified=true,typeKeyLocation=first]
+   52,089,739   ns       81446 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_toJson[minified=true,typeKeyLocation=first]
+    3,322,161   ns        5451 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_fromJson[minified=true,typeKeyLocation=first]
+    5,338,205   ns       25137 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_fromJson[minified=true,typeKeyLocation=last]
+    1,946,549   ns        2329 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_toJson[minified=true,typeKeyLocation=last]
+   52,074,949   ns       81446 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_toJson[minified=true,typeKeyLocation=last]
+    4,790,746   ns        5456 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_fromJson[minified=true,typeKeyLocation=last]
+    5,852,979   ns       25203 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_fromJson[minified=false,typeKeyLocation=first]
+    1,962,804   ns        2329 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_toJson[minified=false,typeKeyLocation=first]
+   52,207,552   ns       81446 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_toJson[minified=false,typeKeyLocation=first]
+    4,271,177   ns        5459 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_fromJson[minified=false,typeKeyLocation=first]
+    5,885,173   ns       25191 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_fromJson[minified=false,typeKeyLocation=last]
+    1,967,656   ns        2329 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_toJson[minified=false,typeKeyLocation=last]
+   52,012,551   ns       81446 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.gson_toJson[minified=false,typeKeyLocation=last]
+    6,817,343   ns        5465 allocs    Trace    Method Trace    AndroidPolymorphicBenchmark.moshi_fromJson[minified=false,typeKeyLocation=last]
     """.trimIndent()
     val regex =
         """\s*(?<time>[0-9,.]+)\s+(?<timeunit>[a-zA-Z]+)\s+(?<allocs>[0-9]+)\sallocs\s+Trace\s+Method\sTrace\s+(?<benchmark>.+)""".toRegex()
